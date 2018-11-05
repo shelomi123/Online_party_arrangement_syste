@@ -2,6 +2,7 @@
     float: left;
     width: 33.33%;
     padding: 5px;
+    color:navy;
 }
 
 .clearfix::after{
@@ -19,5 +20,17 @@
 }
 
 .header{
-    height: 50%;
+    height: 400px;
+    background-image: url("../image/original.jpg");
+    border-radius: 10px;
+    color: aliceblue;
+    background-position-x: 100px;
+    
+}
+.banner{
+    color:#193446;
+}
+
+body{
+    background-image: url("../image/pic02.jpg");
 }
