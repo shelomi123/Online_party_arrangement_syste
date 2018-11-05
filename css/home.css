@@ -2,15 +2,18 @@
     float: left;
     width: 33.33%;
     padding: 5px;
-    height: 60%;
 }
 
-.clearfix::after {
+.clearfix::after{
     content: "";
-    clear: both;
-    display: table;
+    width: 33.33%;
+    padding: 5px;
 }
 
-.header{
-    background-image: url("../image/pic02.jpg")
+*{
+    box-sizing: border-box;
+}
+
+.box{
+    height: 500px;
 }
