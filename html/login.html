@@ -1,13 +1,13 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../css/login.css"
-        
+        <link rel="stylesheet" href="../css/login.css">
     </head>
 
     <body>
     <h1>Login Form</h1>
-        <form action="../html/home.html method="POST">
+        <form action="../php/login.php method="POST">
             <!-- containing avatar-->
+            <div class="pick"></div>
             <div class="imgcontainer">
                 <img src="../image/head-659651_1920.png" alt="avatar" class="avatar">
             </div>
@@ -19,11 +19,12 @@
                 <label for="psw"><b>Password</b></label>
                 <input type="text" placeholder="Enter password" name="psw" required>
 
-                <button type="submit">Login</button>
+                <button type="submit" value="login">Login</button>
             </div>
             <div>
-                <button type="submit" class="cancelBtn">Cancel</button>
+                <button type="submit" class="cancelBtn" value="">Cancel</button>
             </div>
+        </div>
         </form>
     </body>
 </html>
