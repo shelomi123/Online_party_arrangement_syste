@@ -6,7 +6,7 @@
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: center;
+    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 16px 14px;
@@ -24,4 +24,16 @@
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
+}
+
+/* background picture of wedding*/
+.page{
+    background-image: url("../image/wedding_pge.jpg");
+    height: 110%;
+    width: 100%;
+}
+
+/* Adding hover to backgrd img*/
+.page :hover{
+    opacity: 0.4;
 }
