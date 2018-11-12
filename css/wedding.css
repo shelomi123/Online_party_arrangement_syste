@@ -29,11 +29,29 @@
 /* background picture of wedding*/
 .page{
     background-image: url("../image/wedding_pge.jpg");
-    height: 110%;
+    height: 100%;
     width: 100%;
 }
 
 /* Adding hover to backgrd img*/
 .page :hover{
     opacity: 0.4;
+}
+
+/*centerd table*/
+
+.tb{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ddd;
+}
+
+tr{
+    border: 2px solid black;
+    padding: "10";
+}
+
+table{
+    color: #ddd;
 }
