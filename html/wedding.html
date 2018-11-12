@@ -3,32 +3,50 @@
 <head>
     <link rel="stylesheet" href="../css/wedding.css">
 </head>
-     <body>
-        <div class="page">
-            <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="../html/new.html">News</a>
-                <a href="../html/new.html">Contact</a>
-                <a href="../html/new.html">About</a>
-            </div>
-            <div class="tb">
-                <table style="width:60%">
-                    <tr>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>Home</td>
-                    </tr>
-                </table>                    
+
+<body>
+    <div class="page">
+        <div class="topnav">
+            <div class="dropdown">
+                <button class="dropbtn">Login As</button>
+                <div class="dropdown-content">
+                    <a href="../html/login.html">Login as User</a>
+                    <a href="../html/login.html">Login as Admin</a>
                 </div>
             </div>
+            <a class="active" href="../html/home.html">Home</a>
+            <a href="../html/new.html">News</a>
+            <a href="../html/new.html">Contact</a>
+            <a href="../html/new.html">About</a>
         </div>
-    </body>
+        <div class="tb">
+            <table style="width:60%">
+                <tr>
+                    <td>Catering Service</td>
+                </tr>
+                <tr>
+                    <td>Decorations</td>
+                </tr>
+                <tr>
+                    <td>Photography</td>
+                </tr>
+                <tr>
+                    <td>Cakes</td>
+                </tr>
+                <tr>
+                    <td>Wedding Vehicle</td>
+                </tr>
+            </table>
+        </div>
+
+        <form action="/action_page.php">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+            <div class="form">
+            </div>
+        </div>
+    </div>
+</body>
 
 </html>
