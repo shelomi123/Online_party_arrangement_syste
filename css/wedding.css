@@ -97,10 +97,16 @@ tr{
 table{
     color:#ddd;
     padding: 20px 15px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
 }
 
-/*form*/
-form{
+iframe{
     position: absolute;
-    float: right;
+    left: 50%;
+    top: 35%;
+    height: 60%;
+    width: 40%;
+    background:white;
 }
