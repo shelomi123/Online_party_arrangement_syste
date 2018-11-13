@@ -110,3 +110,7 @@ iframe{
     width: 40%;
     background:white;
 }
+
+tr :hover{
+    color: #f44265;
+}
