@@ -10,7 +10,6 @@
     if($connection->connect_error){
         die("Connection failed".$connection->connect_error);
     } else {
-        echo "Sex";
     }
 
     $user_name = $_POST['user_name'];
@@ -25,8 +24,10 @@
         echo $num_of_rows;
         if($num_of_rows == 1){
             echo " success";
+            header('Location: ../html/home.html');
         }else{
             echo "invalid usrename or password";
+
         }
     } else {
         echo "Query failed";
