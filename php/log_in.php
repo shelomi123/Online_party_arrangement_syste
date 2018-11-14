@@ -11,14 +11,10 @@
         die("Connection failed".$connection->connect_error);
     }
 
-
-
-
-    $user_id = $_POST['id'];
-    $user_name = $_POST['name'];
+    $user_id = $_POST['user-id'];
+    $user_name = $_POST['user-name'];
     $password = $_POST['password'];
 
     $sql = "INSERT INTO login (user-id,user-name,password) VALUES ('$id','$name','$password')";
     mysqli_query($connection, $sql);//passing sql
-
 ?>
