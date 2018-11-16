@@ -6,12 +6,14 @@
     $dbPassword = "";
     $dbName = "aaa";
 
+    /* making connection with data base*/
     $connection = mysqli_connect($dbservername, $dbUsername, $dbPassword, $dbName);
     if($connection->connect_error){
         die("Connection failed".$connection->connect_error);
     } else {
     }
 
+    /*taking variebles */
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
@@ -23,8 +25,8 @@
         $num_of_rows = mysqli_num_rows($result);
         echo $num_of_rows;
         if($num_of_rows == 1){
-            echo " success";
-            header('Location: ../html/home.html');
+             echo " success";  /* only one row in successfull login*/
+            header('Location: ../html/home.html');  /*directing homepage if login successfull */
         }else{
             echo "invalid usrename or password";
 

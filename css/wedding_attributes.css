@@ -2,3 +2,7 @@ frame{
     position: absolute;
     background-color: aqua;
 }
+
+body{
+    background-image: url(../image/wedd.jpg);
+}
