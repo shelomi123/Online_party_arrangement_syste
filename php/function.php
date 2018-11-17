@@ -2,7 +2,7 @@
 session_start();
 
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'login');
+$db = mysqli_connect('localhost', 'root', '', 'aaa');
 
 // variable declaration
 $username = "";
@@ -41,13 +41,13 @@ function register(){
 
 		if (isset($_POST['type'])) {
 			$user_type = e($_POST['type']);
-			$query = "INSERT INTO login (uname, type, password) 
+			$query = "INSERT INTO login ( uname, type, password) 
 					  VALUES('$username', '$user_type', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success']  = "New user successfully created!!";
 			header('location: home.php');
 		}else{
-			$query = "INSERT INTO login (uname,type, password) 
+			$query = "INSERT INTO login ( uname,type, password) 
 					  VALUES('$username', '$user_type', '$password')";
 			mysqli_query($db, $query);
 
@@ -56,7 +56,7 @@ function register(){
 
 			$_SESSION['login'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: index.php');				
+			header('location: ../html/home.html');				
 		}
 	}
 }
