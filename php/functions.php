@@ -1,5 +1,4 @@
 <?php 
-session_start();
 
 // connect to database
 $db = mysqli_connect('localhost', 'root', '', 'aaa');
@@ -14,9 +13,11 @@ if (isset($_POST['register_btn'])) {
 }
 
 // REGISTER USER
+//if(!function_exists('register')){
+
 function register(){
-	// call these variables with the global keyword to make them available in function
-	global $db, $errors, $username;
+    // call these variables with the global keyword to make them available in function
+    global $db, $errors, $username;
 
 	// receive all input values from the form. Call the e() function
     // defined below to escape form values
@@ -45,7 +46,7 @@ function register(){
 					  VALUES('$username', '$user_type', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success']  = "New user successfully created!!";
-			header('location: home.php');
+			header('location: ../html/home.html');
 		}else{
 			$query = "INSERT INTO login ( uname,type, password) 
 					  VALUES('$username', '$user_type', '$password')";
@@ -61,21 +62,27 @@ function register(){
 	}
 }
 
+
 // return user array from their id
 function getUserById($id){
 	global $db;
-	$query = "SELECT * FROM login WHERE id=" . $id;
+	$query = "SELECT * FROM login WHERE user-id=" . $id;
 	$result = mysqli_query($db, $query);
 
 	$user = mysqli_fetch_assoc($result);
 	return $user;
 }
 
+
+
 // escape string
+
 function e($val){
 	global $db;
 	return mysqli_real_escape_string($db, trim($val));
 }
+
+
 
 function display_error() {
 	global $errors;

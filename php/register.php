@@ -1,4 +1,4 @@
-<?php include('function.php') ?>
+<?php include('functions.php') ?>
 <html>
 <head>
 	<title>Lets Register..!</title>
@@ -10,7 +10,7 @@
 		<h2>Register</h2>
 	</div>
 	<form method="post" action="register.php">
-		<?php include('function.php') ?>  <!-- if user add incorrect data show error -- display_error() function -->
+		<?php include('functions.php') ?>  <!-- if user add incorrect data show error -- display_error() function -->
 		<div class="input-group">
 			<label>Username</label>
 			<input type="text" name="username" value="<?php ECHO $username; ?>">
