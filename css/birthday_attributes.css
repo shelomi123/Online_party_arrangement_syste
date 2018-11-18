@@ -1,0 +1,8 @@
+frame{
+    position: absolute;
+    background-color: aqua;
+}
+
+body{
+    background-image: url(../image/birth.jpg);
+}

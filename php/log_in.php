@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     //php
     $dbservername = "localhost";
@@ -25,33 +26,30 @@
         $num_of_rows = mysqli_num_rows($result);
         echo $num_of_rows;
         if($num_of_rows == 1){
-             echo " success";  /* only one row in successfull login*/
-            header('Location: ../html/home.html');  /*directing homepage if login successfull */
+            $query = mysqli_fetch_assoc($result);
+            // Check username and password match
+            if ($query['uname'] == 'admin') {
+                // Set username session variable
+                $_SESSION['uname'] = $_POST['uname'];
+                // Jump to secured page
+                header('Location: ../html/admin.html');
+            }
+            elseif ($query['uname'] == 'user') {
+                // Set username session variable
+                $_SESSION['uname'] = $_POST['uname'];
+                // Jump to secured page
+                header('Location: ../html/home.html');
+            }
+            else {
+                // Jump to login page
+                header('Location: ../html/home.html');
+            }
         }else{
             echo "invalid usrename or password";
 
         }
     } else {
         echo "Query failed";
-    }
-
-    $query = mysql_fetch_array($login);
-    // Check username and password match
-    if ($query['user'] == 'admin') {
-    // Set username session variable
-    $_SESSION['username'] = $_POST['username'];
-    // Jump to secured page
-    header('Location:newAdmin.php');
-    }
-    elseif ($query['user'] == 'user') {
-    // Set username session variable
-    $_SESSION['username'] = $_POST['username'];
-    // Jump to secured page
-    header('Location:user.php');
-    }
-    else {
-    // Jump to login page
-    header('Location: ind.php');
     }
      
 ?>

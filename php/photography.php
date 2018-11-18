@@ -1,7 +1,6 @@
 
 <html>
-<head>
-    <meta charset="utf-8" />
+<head>    <meta charset="utf-8" />
     <title>Our photograpers</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
@@ -21,6 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
+//retrieving all data from photographers table
 $sql = "SELECT * FROM photograpers";
 $result = $conn->query($sql);
 
