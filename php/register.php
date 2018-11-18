@@ -10,10 +10,9 @@
 		<h2>Register</h2>
 	</div>
 	<form method="post" action="register.php">
-		<?php include('functions.php') ?>  <!-- if user add incorrect data show error -- display_error() function -->
 		<div class="input-group">
 			<label>Username</label>
-			<input type="text" name="username" value="<?php ECHO $username; ?>">
+			<input type="text" name="uname" value="<?php ECHO $username; ?>">
 		</div>
 		<div class="input-group">
 			<label>Password</label>

@@ -1,6 +1,7 @@
 form{
     border: 3px solid #f1f1f1;
-    width:60%;
+    width:100%;
+    position: absolute;
 }
 
 /* width full inputs */
