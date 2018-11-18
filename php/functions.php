@@ -38,7 +38,7 @@ function register(){
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
-		$password = md5($password_1);//encrypt the password before saving in the database
+		$password = ($password_1);//saving password in db
 
 		if (isset($_POST['type'])) {
 			$user_type = e($_POST['type']);
@@ -95,5 +95,4 @@ function display_error() {
 		echo '</div>';
 	}
 }	
-
 ?>

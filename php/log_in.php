@@ -34,5 +34,21 @@
     } else {
         echo "Query failed";
     }
+
+    // Retrieve username and password from database according to user's input
+    $login = mysql_query("SELECT * FROM login WHERE uname= '" . $user_name . "' AND password='" . $password . "' ");
+    // Check username and password match
+if (mysql_num_rows($login) == 'admin') {
+    // Set username session variable
+    $_SESSION['uname'] = $_POST['uname'];
+    // Jump to secured page
+    header('Location:../html/admin.html');
+    }
+else if(mysql_num_rows($login) == 'user') {
+    // Set username session variable
+    $_SESSION['uname'] = $_POST['uname'];
+    // Jump to secured page
+    header('Location:../html/home.html');
+}
      
 ?>

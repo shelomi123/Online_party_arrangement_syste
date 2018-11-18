@@ -9,7 +9,7 @@
 	<div class="header">
 		<h2>Register</h2>
 	</div>
-	<form method="post" action="register.php">
+	<form method="post" action="Register.php">
 		<div class="input-group">
 			<label>Username</label>
 			<input type="text" name="uname" value="<?php ECHO $username; ?>">
@@ -23,7 +23,7 @@
 			<input type="password" name="password_2">
 		</div>
 		<div class="input-group">
-			<button type="submit" class="btn" name="register_btn">Register</button>
+			<button type="submit" onclick="location.href='../html/login.html'" class="btn" name="register_btn">Register</button>
 		</div>
 		<p>
 			Already a member? <a href="../html/login.html">Sign in</a>
