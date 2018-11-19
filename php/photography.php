@@ -25,15 +25,32 @@ $sql = "SELECT * FROM photograpers";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+?>
+<table border=".5px">
+    <tr>  
+        <th>Photograper id </th>  
+        <th>Name </th>  <th>Age </th>  
+        <th>Experience in yrs</th>  
+        <th>Select</th>
+    </tr>
+    <?php 
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<br> id: ". $row["p-id"]. " <b> Name: ". $row["p-name"]. "-Age " . $row["p-age"] . "-Experience" .$row["p-exp"]."years". "<br>";
+    ?>
+    <tr>
+        <td><?php echo $row["p-id"]?></td>
+        <td><?php echo $row["p-name"]?></td>
+        <td><?php echo $row["p-age"]?></td>
+        <td><?php echo $row["p-exp"]?></td>
+        <td><input type="checkbox" name="selected" value="<?php echo $row["p-id"]?>"></td>
+    </tr>
+    <?php } ?>
+</table>
+    <?php
+    } else {
+        echo "0 results";
     }
-} else {
-    echo "0 results";
-}
-
-$conn->close();
+    $conn->close();
 ?> 
     
 </body>
