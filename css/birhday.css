@@ -66,9 +66,13 @@
 
 /* background picture of wedding*/
 .page{
-    background-image: url("../image/wedding_pge.jpg");
-    height: 100%;
-    width: 100%;
+    background-image: url("../image/birthdayparty.jpg");
+    height: 7200px;
+    width: 10000px;
+}
+
+.page :hover{
+    opacity: 0.4;
 }
 
 /* Adding hover to backgrd img*/
