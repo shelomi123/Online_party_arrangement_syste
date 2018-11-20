@@ -71,10 +71,6 @@
     width: 10000px;
 }
 
-.page :hover{
-    opacity: 0.4;
-}
-
 /* Adding hover to backgrd img*/
 .page :hover{
     opacity: 0.4;
