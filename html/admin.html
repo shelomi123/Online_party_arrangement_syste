@@ -1,13 +1,120 @@
+<!DOCTYPE html>
 <html>
+<title>Admin</title>
+
 <head>
-    <link rel="stylesheet" href="../css/admin.css"/>    
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
+
 <body>
-    <div class="button">
-        <a href="#">Link Button</a><br>
-        <a href="#">Link Button</a><br>
-        <a href="#">Link Button</a><br>
-        <a href="#">Link Button</a><br>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
     </div>
+
+    <div style="padding-left:60px">
+        <h2 align="center">Admin Area</h2>
+        <img src="../image/admin.png" width="10%" height="10%" >
+    </div>
+
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'catering')" id="defaultOpen">Catering Suppliers</button>
+        <button class="tablinks" onclick="openCity(event, 'decoration')">Decoration Suppliers</button>
+        <button class="tablinks" onclick="openCity(event, 'photography')">Photographers</button>
+    </div>
+
+    <div id="catering" class="tabcontent">
+
+        <div class="btn-group">
+            <button onClick="parent.location='adduser.html'" value=''>ADD</button>
+            <button onClick="parent.location='userupdate.html'" value=''>UPDATE</button>
+            <button onClick="parent.location='userdel.html'" value=''>REMOVE</button>
+        </div>
+
+
+
+        <h3>Active Suppliers</h3>
+        <table border="1">
+            <th>Name</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Age</th>
+            <tr>
+                <td>Ashan</td>
+                <td>Matara</td>
+                <td>0713384832</td>
+                <td>21</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="decoration" class="tabcontent">
+        <div class="btn-group">
+            <button onClick="parent.location='adduser.html'" value=''>ADD</button>
+            <button onClick="parent.location='userupdate.html'" value=''>UPDATE</button>
+            <button onClick="parent.location='userdel.html'" value=''>REMOVE</button>
+        </div>
+        <h3>Active Suppliers</h3>
+        <table border="1">
+            <th>Name</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Age</th>
+            <tr>
+                <td>Ashan</td>
+                <td>Matara</td>
+                <td>0713384832</td>
+                <td>21</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="photography" class="tabcontent">
+        <div class="btn-group">
+            <button onClick="parent.location='adduser.html'" value=''>ADD</button>
+            <button onClick="parent.location='userupdate.html'" value=''>UPDATE</button>
+            <button onClick="parent.location='userdel.html'" value=''>REMOVE</button>
+            
+        </div>
+        <h3>Active Photographers</h3>
+        <table border="1">
+            <th>Name</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Age</th>
+            <tr>
+                <td>Ashan</td>
+                <td>Matara</td>
+                <td>0713384832</td>
+                <td>21</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
 </body>
+
 </html>
