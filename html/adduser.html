@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <title>Admin</title>
 
@@ -23,24 +23,25 @@
     <h3>Adding User</h3>
 
 <div class="container">
-    <form action="../css/adduserCatering.php" method="POST"></form>    
+    <form action="../php/adduserCatering.php" method="POST"></form>    
     
-    <label for="name">NAME</label>
-    <input type="text" id="fname" name="name" placeholder="Enter name..">
-
     <label for="id">USER_ID</label>
-    <input type="text" id="id" name="id" placeholder="Enter id..">
+    <input type="text"  name="id" placeholder="Enter id.." value="">
+
+    <label for="name">NAME</label>
+    <input type="text" name="name" placeholder="Enter name..">
+
 
     <label for="address">ADDRESS</label>
-    <input type="text" id="address" name="address" placeholder="Enter address..">
+    <input type="text" name="address" placeholder="Enter address..">
 
     <label for="age">AGE</label>
-    <input type="text" id="age" name="age" placeholder="Enter age..">
+    <input type="text" name="age" placeholder="Enter age..">
 
     <label for="Experience">EXPERIENCE</label>
-    <input type="text" id="experience" name="experience" placeholder="Your Experience In years">
+    <input type="text" name="experience" placeholder="Your Experience In years">
 
-    <input type="submit" name="submit" type="submit" value="Submit">
+    <button type="submit" name="submit" value="Submit">
   </form>
 </div>
 
