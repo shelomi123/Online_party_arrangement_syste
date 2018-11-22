@@ -5,7 +5,7 @@ $password = "";
 $dbname = "aaa";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -18,8 +18,13 @@ $username = $_POST["cName"];
 $age = $_POST["cAge"];
 $exp = $_POST["cExp"];
 
-$sql = "INSERT INTO caters (id, cName, cAge,cExp)
-VALUES ('$id', '$username', '$age','$exp')";
+$sql = "INSERT INTO caters (id, cName, cAge,cExp) VALUES ('$id', '$username', '$age','$exp')";
+if(!mysqli_query($sql,$conn))
+{
+    die('Error'.mysqli_error);
+}
+else{
+    echo "data inserted.."
 }
 
 $conn->close();

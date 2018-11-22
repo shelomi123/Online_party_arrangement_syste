@@ -1,4 +1,29 @@
+<?php
+$id = $_POST["id"];
+$username = $_POST["name"];
+$age = $_POST["age"];
+$exp = $_POST["experience"];
 
+$conn = mysqli_connect("localhost","root","");
+if(!conn)
+{
+    die('error'.mysqli_error());
+}
+
+mysqli_select_db("aaa",$conn);
+$sql = "INSERT INTO caters(id,cName,cAge,cExp) VALUES('$id','$username',$age','$exp')";
+
+if(!mysqli_query($sql,$conn))
+{
+    die('error inserting'.mysqli_error);
+}
+
+else{
+    echo "success";
+}
+$conn->close();
+
+?>
 <html>
 <title>Admin</title>
 
@@ -23,7 +48,7 @@
     <h3>Adding User</h3>
 
 <div class="container">
-    <form action="../php/adduserCatering.php" method="POST"></form>    
+    <form action="adduser.php" method="POST"></form>    
     
     <label for="id">USER_ID</label>
     <input type="text"  name="id" placeholder="Enter id.." value="">
@@ -41,7 +66,7 @@
     <label for="Experience">EXPERIENCE</label>
     <input type="text" name="experience" placeholder="Your Experience In years">
 
-    <button type="submit" name="submit" value="Submit">
+    <button type="submit" name="submit">Submit</button>
   </form>
 </div>
 
