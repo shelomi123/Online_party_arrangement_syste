@@ -7,7 +7,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h2 align="center">Make your cake with our expert's hand..!!</h2>
+    <h2 align="center">Lets make party rocking with our DJs..!!</h2>
 
 <?php
 $servername = "localhost";
@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 } 
 
 //retrieving all data from photographers table
-$sql = "SELECT * FROM cakes";
+$sql = "SELECT * FROM djs";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -41,9 +41,9 @@ if ($result->num_rows > 0) {
     ?>
     <tr>
         <td><?php echo $row["id"]?></td>
-        <td><?php echo $row["cke-name"]?></td>
-        <td><?php echo $row["cke-age"]?></td>
-        <td><?php echo $row["cke-exp"]?></td>
+        <td><?php echo $row["dj-name"]?></td>
+        <td><?php echo $row["dj-age"]?></td>
+        <td><?php echo $row["dj-exp"]?></td>
         <td><input type="checkbox" name="selected" value="<?php echo $row["id"]?>"></td>
     </tr>
     <?php } ?>
