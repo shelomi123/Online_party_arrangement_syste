@@ -66,15 +66,17 @@
 
 /* background picture of wedding*/
 .page{
-    background-image: url("../image/birthdayparty.jpg");
-    height: 7200px;
-    width: 10000px;
+    background-image: url("../image/beachparty.jpg");
+    height: 100%;
+    width: 100%;
 }
+
 
 /* Adding hover to backgrd img*/
 .page :hover{
     opacity: 0.4;
 }
+
 
 /*centerd table*/
 
@@ -84,6 +86,31 @@
     left: 25%;
     color: #ddd;
     padding: 20px 15px;
+}
+
+    /* unvisited link */
+.tb:link {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* visited link */
+.tb:visited {
+    color: green;
+}
+
+/* mouse over link */
+.tb:hover {
+    color: hotpink;
+}
+
+/* selected link */
+.tb:active {
+    color: blue;
 }
 
 tr{
