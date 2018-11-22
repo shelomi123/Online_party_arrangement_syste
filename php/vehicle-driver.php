@@ -2,12 +2,12 @@
 <html>
 <head> 
    <meta charset="utf-8" />
-    <title>Our Vehicle Drivers</title>
+    <title>Our experienced drivers..</title>
     <link rel="stylesheet" href="../css/photography.css" />
     <script src="main.js"></script>
 </head>
 <body>
-    <h2 align="center">Choose your Catering Suppliers!!</h2>
+    <h2 align="center">Our Drivers!!</h2>
 
 <?php
 $servername = "localhost";
@@ -23,14 +23,14 @@ if ($conn->connect_error) {
 } 
 
 //retrieving all data from photographers table
-$sql = "SELECT * FROM vehicle-drivers";
+$sql = "SELECT * FROM drivers";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 ?>
 <table class="table">
     <tr>  
-        <th> id </th>  
+        <th>Driver id </th>  
         <th>Name </th>  <th>Age </th>  
         <th>Exp in yrs</th>  
         <th>Select</th>
@@ -41,9 +41,9 @@ if ($result->num_rows > 0) {
     ?>
     <tr>
         <td><?php echo $row["id"]?></td>
-        <td><?php echo $row["v-name"]?></td>
-        <td><?php echo $row["v-age"]?></td>
-        <td><?php echo $row["v-exp"]?></td>
+        <td><?php echo $row["d-name"]?></td>
+        <td><?php echo $row["d-age"]?></td>
+        <td><?php echo $row["d-exp"]?></td>
         <td><input type="checkbox" name="selected" value="<?php echo $row["id"]?>"></td>
     </tr>
     <?php } ?>

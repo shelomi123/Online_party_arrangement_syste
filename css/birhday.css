@@ -67,9 +67,10 @@
 /* background picture of wedding*/
 .page{
     background-image: url("../image/birthdayparty.jpg");
-    height: 7200px;
-    width: 10000px;
+    height: 100%;
+    width: 100%;
 }
+
 
 /* Adding hover to backgrd img*/
 .page :hover{
