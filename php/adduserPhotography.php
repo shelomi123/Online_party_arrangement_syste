@@ -13,11 +13,11 @@ if (!$conn) {
 
 if (isset($_POST['submit'])){
 
-$username = $_POST["cName"];
-$age = $_POST["cAge"];
-$exp = $_POST["cExp"];
+$username = $_POST["d-name"];
+$age = $_POST["d-age"];
+$exp = $_POST["d-exp"];
 
-$sql = "INSERT INTO caters VALUES (0, '$username', '$age','$exp')";
+$sql = "INSERT INTO photographers VALUES (0, '$username', '$age','$exp')";
 if(!mysqli_query($conn,$sql))
 {
     echo "error!";
