@@ -1,35 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "aaa";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    echo mysqli_error();
-} 
+require_once "connection.php";
 
 if (isset($_POST['submit'])){
 
-$username = $_POST["d-name"];
-$age = $_POST["d-age"];
-$exp = $_POST["d-exp"];
-
-$sql = "INSERT INTO photographers VALUES (0, '$username', '$age','$exp')";
-if(!mysqli_query($conn,$sql))
-{
-    echo "error!";
-}
-else{
-    echo "data inserted..".$username.'!';
-}
-}
-
-$conn->close();
-
-?>
+    $username = $_POST["name"];
+    $age = $_POST["age"];
+    $exp = $_POST["experience"];
+    
+    $sql = "INSERT INTO photographers (pName, pAge ,pExp) VALUES ('$username', '$age','$exp')";
+    $result = mysqli_query($conn, $sql);
+    }
+    ?>
 <html>
 <title>Admin</title>
 
@@ -54,7 +35,7 @@ $conn->close();
     <h3>Adding User</h3>
 
 <div class="container">
-    <form action="adduserCatering.php" method="POST"></form>    
+    <form action="adduserPhotography.php" method="POST">  
     
     <label for="id">USER_ID</label>
     <input type="text"  name="id" placeholder="Enter id.." value="">
@@ -72,7 +53,7 @@ $conn->close();
     <label for="Experience">EXPERIENCE</label>
     <input type="text" name="experience" placeholder="Your Experience In years..">
 
-    <button type="submit" name="submit"  onclick="location.href='../html/admin.html ">Submit</button>
+    <button type="submit" name="submit">Submit</button>
   </form>
 </div>
 

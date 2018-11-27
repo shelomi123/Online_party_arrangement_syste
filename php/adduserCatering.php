@@ -13,28 +13,18 @@ if (!$conn) {
 
 if (isset($_POST['submit'])){
 
-$username = $_POST["cName"];
-$age = $_POST["cAge"];
-$exp = $_POST["cExp"];
+$username = $_POST["name"];
+$age = $_POST["age"];
+$exp = $_POST["experience"];
 
-$sql = "INSERT INTO caters VALUES (0, '$username', '$age','$exp')";
-if(!mysqli_query($conn,$sql))
-{
-    echo "error!";
+$sql = "INSERT INTO caters (cName,cAge,cExp) VALUES ('$username', '$age','$exp')";
+$result = mysqli_query($conn, $sql);
 }
-else{
-    echo "data inserted..".$username.'!';
-}
-}
-
-$conn->close();
-
 ?>
+
 <html>
 <title>Admin</title>
-
 <head>
-    <link rel="stylesheet" href="../image/admin.png">
     <link rel="stylesheet" href="../css/adduser.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +44,7 @@ $conn->close();
     <h3>Adding User</h3>
 
 <div class="container">
-    <form action="adduserCatering.php" method="POST"></form>    
+    <form action="adduserCatering.php" method="POST">    
     
     <label for="id">USER_ID</label>
     <input type="text"  name="id" placeholder="Enter id.." value="">
@@ -72,9 +62,8 @@ $conn->close();
     <label for="Experience">EXPERIENCE</label>
     <input type="text" name="experience" placeholder="Your Experience In years..">
 
-    <button type="submit" name="submit"  onclick="location.href='../html/admin.html ">Submit</button>
+    <button type="submit" name="submit">Submit</button>
   </form>
 </div>
-
 </body>
 </html>
