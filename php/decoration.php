@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if ($_SESSION['testcomplete'] == 'yes') {
+    header("Location:../html/home.html");
+}
+?>
 <html>
 <head> 
    <meta charset="utf-8" />
@@ -41,9 +46,9 @@ if ($result->num_rows > 0) {
     ?>
     <tr>
         <td><?php echo $row["id"]?></td>
-        <td><?php echo $row["d-name"]?></td>
-        <td><?php echo $row["d-age"]?></td>
-        <td><?php echo $row["d-exp"]?></td>
+        <td><?php echo $row["dName"]?></td>
+        <td><?php echo $row["dAge"]?></td>
+        <td><?php echo $row["dExp"]?></td>
         <td><input type="checkbox" name="selected" value="<?php echo $row["d-id"]?>"></td>
     </tr>
     <?php } ?>

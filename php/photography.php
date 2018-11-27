@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if ($_SESSION['testcomplete'] == 'yes') {
+    header("Location:../html/home.html");
+}
+?>
 <html>
 <head> 
    <meta charset="utf-8" />
@@ -40,11 +45,11 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
     ?>
     <tr>
-        <td><?php echo $row["p-id"]?></td>
-        <td><?php echo $row["p-name"]?></td>
+        <td><?php echo $row["id"]?></td>
+        <td><?php echo $row["pName"]?></td>
         <td><?php echo $row["p-age"]?></td>
-        <td><?php echo $row["p-exp"]?></td>
-        <td><input type="checkbox" name="selected" value="<?php echo $row["p-id"]?>"></td>
+        <td><?php echo $row["pExp"]?></td>
+        <td><input type="checkbox" name="selected" value="<?php echo $row["id"]?>"></td>
     </tr>
     <?php } ?>
 </table>
